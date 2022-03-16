@@ -1,0 +1,69 @@
+diary on
+2+34
+
+ans =
+
+    36
+
+x = 78
+
+x =
+
+    78
+
+integral(x*integral(x^4))
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('integral', 'D:\Games\toolbox\matlab\funfun\integral.m', 80)" style="font-weight:bold">integral</a> (<a href="matlab: opentoline('D:\Games\toolbox\matlab\funfun\integral.m',80,0)">line 80</a>)
+Not enough input arguments.
+} 
+integralx
+{Unrecognized function or variable 'integralx'.
+} 
+integral(x)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('integral', 'D:\Games\toolbox\matlab\funfun\integral.m', 80)" style="font-weight:bold">integral</a> (<a href="matlab: opentoline('D:\Games\toolbox\matlab\funfun\integral.m',80,0)">line 80</a>)
+Not enough input arguments.
+} 
+x(a,b) = a + b;
+{Unrecognized function or variable 'a'.
+} 
+x * 345
+
+ans =
+
+       26910
+
+x * 345465789
+
+ans =
+
+   2.6946e+10
+
+x * 5678909876567898765678
+
+ans =
+
+   4.4295e+23
+
+x * 5 # Уснржение на 5)
+ x * 5 # Уснржение на 5)
+       ↑
+{Error: Invalid text character. Check for unsupported symbol, invisible character, or pasting of non-ASCII
+characters.
+} 
+x * 5 # Уснржение на 5
+ x * 5 # Уснржение на 5
+       ↑
+{Error: Invalid text character. Check for unsupported symbol, invisible character, or pasting of non-ASCII
+characters.
+} 
+x + 34 % Сложение
+
+ans =
+
+   112
+
+x * x % Multi
+
+ans =
+
+        6084
+
