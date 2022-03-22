@@ -1,13 +1,13 @@
 X = [11 12 13 16 17 17 18 19 22 25];
 Y = [-5 -9 -14 -19 -22 -28 -35 -38 -44 -50];
 plot(X, Y)
-N =  10;
+N = 10;
 
 sumX = 0;
 sumX2 = 0;
 sumY = 0;
 sumXY = 0;
-sumX3 = 0;
+sumX3 = 0;  
 sumX4 = 0;
 sumX2Y = 0;
 
@@ -34,12 +34,16 @@ hold on;
 plot(X, f);
 hold off;
 
-matr = [8 sumX sumX2;
+matr = [N sumX sumX2;
         sumX sumX2 sumX3;
         sumX2 sumX3 sumX4;];
     
 invMatr = inv(matr);
 sums = [sumY sumXY sumX2Y];
+
+a0 = 0;
+a1 = 0;
+a2 = 0;
 
 for i = 1:3
     a0 = a0 + invMatr(i) .* sums(i);
