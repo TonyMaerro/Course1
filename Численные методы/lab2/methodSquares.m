@@ -39,17 +39,18 @@ matr = [N sumX sumX2;
         sumX2 sumX3 sumX4;];
     
 invMatr = inv(matr);
-sums = [sumY sumXY sumX2Y];
+sums = [sumY; sumXY; sumX2Y];
 
-a0 = 0;
-a1 = 0;
-a2 = 0;
+A = invMatr * sums;
+a0 = A(1);
+a1 = A(2);
+a2 = A(3);
 
-for i = 1:3
-    a0 = a0 + invMatr(i) .* sums(i);
-    a1 = a1 + invMatr(i + 3) .* sums(i);
-    a2 = a2 + invMatr(i + 6) .* sums(i);
-end
+% for i = 1:3
+%     a0 = a0 + invMatr(i) .* sums(i);
+%     a1 = a1 + invMatr(i + 3) .* sums(i);
+%     a2 = a2 + invMatr(i + 6) .* sums(i);
+% end
 F(10) = 1;
 for i = 1:N
     F(i) = a0 + a1 .* X(i) + a2 .* (X(i))^2;
@@ -57,3 +58,4 @@ end
 hold on;
 plot(X, F);
 hold off;
+legend('first function', '-3.3779x + 31.0244', '48.6851 - 5.4932 .* x + 0.0498.* x^2') 
