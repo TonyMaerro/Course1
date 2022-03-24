@@ -72,7 +72,7 @@ void Dictionary::UpdEntry(Instance& inst, int id, Entry new_ed)
 		{
 			for (int j = i + 1; j < inst.cnt; j++)
 			{
-				if (new_ed.id == inst.dictionary[j].id) throw THROW09;
+				if (new_ed.id == inst.dictionary[j].id) throw THROW08;
 			}
 			isFound = true;
 	
@@ -80,7 +80,7 @@ void Dictionary::UpdEntry(Instance& inst, int id, Entry new_ed)
 			strcpy_s(inst.dictionary[i].name, new_ed.name);
 			break;
 		}
-		else if (new_ed.id == inst.dictionary[i].id) throw THROW09;
+		else if (new_ed.id == inst.dictionary[i].id) throw THROW08;
 	}
 	if (!isFound)
 	{

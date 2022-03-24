@@ -1,4 +1,13 @@
 #pragma once
+#define TEST_CREATE_01
+#define TEST_CREATE_02
+#define TEST_ADDENTRY_03
+#define TEST_ADDENTRY_04
+#define TEST_GETENTRY_05
+#define TEST_DELENTRY_06
+#define TEST_UPDENTRY_07
+#define TEST_UPDENTRY_08
+
 #define DICTNAMEMAXSIZE 20
 #define DICTMAXSIZE 100
 #define ENTRYNAMEMAXSIZE 30
@@ -9,8 +18,7 @@
 #define THROW05 "GetEntry: не найден элемент"
 #define THROW06 "DelEntry: не найден элемент"
 #define THROW07 "UpdEntry: не найден элемент"
-#define THROW08 "DelEntry: дублирование идентификатора"
-#define THROW09 "UpdEntry: дублирование идентификатора"
+#define THROW08 "UpdEntry: дублирование идентификатора"
 
 namespace Dictionary
 {
