@@ -1,10 +1,13 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 #include "stdafx.h"
 using namespace Dictionary;
 
 void main()
 {
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 	setlocale(LC_ALL, "ru");
 	try
 	{
