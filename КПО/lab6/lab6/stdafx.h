@@ -1,7 +1,7 @@
 #pragma once
 #include "Dictionary.h"
 
-#if defined(TEST_DICTIONARY)
+#if !defined(TEST_DICTIONARY)
 #define TEST_CREATE_01
 #define TEST_CREATE_02
 #define TEST_ADDENTRY_03
