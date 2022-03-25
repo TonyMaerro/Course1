@@ -4,14 +4,14 @@
 #define DICTNAMEMAXSIZE 20
 #define DICTMAXSIZE 100
 #define ENTRYNAMEMAXSIZE 30
-#define THROW01 "Create: РїСЂРµРІС‹С€РµРЅ СЂР°Р·РјРµСЂ РёРјРµРЅРё СЃР»РѕРІР°СЂСЏ"
-#define THROW02 "Create: РїСЂРµРІС‹С€РµРЅ СЂР°Р·РјРµСЂ РјР°РєСЃРёРјР°Р»СЊРЅРѕР№ РµРјРєРѕСЃС‚Рё СЃР»РѕРІР°СЂСЏ"
-#define THROW03 "AddEntry: РїРµСЂРµРїРѕР»РЅРµРЅРёРµ СЃР»РѕРІР°СЂСЏ"
-#define THROW04 "AddEntry: РґСѓР±Р»РёСЂРѕРІР°РЅРёРµ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂР°"
-#define THROW05 "GetEntry: РЅРµ РЅР°Р№РґРµРЅ СЌР»РµРјРµРЅС‚"
-#define THROW06 "DelEntry: РЅРµ РЅР°Р№РґРµРЅ СЌР»РµРјРµРЅС‚"
-#define THROW07 "UpdEntry: РЅРµ РЅР°Р№РґРµРЅ СЌР»РµРјРµРЅС‚"
-#define THROW08 "UpdEntry: РґСѓР±Р»РёСЂРѕРІР°РЅРёРµ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂР°"
+#define THROW01 "Create: превышен размер имени словаря"
+#define THROW02 "Create: превышен размер максимальной емкости словаря"
+#define THROW03 "AddEntry: переполнение словаря"
+#define THROW04 "AddEntry: дублирование идентификатора"
+#define THROW05 "GetEntry: не найден элемент"
+#define THROW06 "DelEntry: не найден элемент"
+#define THROW07 "UpdEntry: не найден элемент"
+#define THROW08 "UpdEntry: дублирование идентификатора"
 
 namespace Dictionary
 {

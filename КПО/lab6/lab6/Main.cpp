@@ -12,20 +12,20 @@ void main()
 	try
 	{
 #if defined(TEST_CREATE_01)
-		Instance d1 = Create("РџСЂРµРїРѕРґffffffffffffffffffffffffffffffffffffffffffffffffffffaРІР°С‚РµР»Рё", 5);
+		Instance d1 = Create("Преподffffffffffffffffffffffffffffffffffffffffffffffffffffaватели", 5);
 #elif defined(TEST_CREATE_02)
-		Instance d1 = Create("РџСЂРµРїРѕРґaРІР°С‚РµР»Рё", 1000);
+		Instance d1 = Create("Преподaватели", 1000);
 #else 
-		Instance d1 = Create("РџСЂРµРїРѕРґaРІР°С‚РµР»Рё", 5);
+		Instance d1 = Create("Преподaватели", 5);
 #endif
-		Entry e1 = { 1, "Р“Р»Р°РґРєРёР№" },
-			  e2 = { 2, "Р’РµСЏР»РєРёРЅ"},
-			  e3 = {3, "РњРёС‰СѓРє"},
-			  e4 = { 4, "Р‘РµР»РѕРґРµРґ"},
+		Entry e1 = { 1, "Гладкий" },
+			  e2 = { 2, "Веялкин"},
+			  e3 = {3, "Мищук"},
+			  e4 = { 4, "Белодед"},
 #if defined(TEST_ADDENTRY_04)
-			  e5 = { 2, "РќР°СЂРєРµРІРёС‡"};
+			  e5 = { 2, "Наркевич"};
 #else 
-			  e5 = { 5, "РќР°СЂРєРµРІРёС‡" };
+			  e5 = { 5, "Наркевич" };
 #endif
 		addEntry(d1, e1);
 		addEntry(d1, e2);
@@ -47,9 +47,9 @@ void main()
 		DelEntry(d1, 2);
 #endif
 #if defined(TEST_UPDENTRY_08)
-		Entry newentry1 = { 1, "Р“СѓСЂРёРЅ" };
+		Entry newentry1 = { 1, "Гурин" };
 #else 
-		Entry newentry1 = { 6, "Р“СѓСЂРёРЅ" };
+		Entry newentry1 = { 6, "Гурин" };
 #endif
 #if defined(TEST_UPDENTRY_07)
 		UpdEntry(d1, 30000, newentry1);
@@ -58,15 +58,15 @@ void main()
 #endif
 		Print(d1);
 
-		Instance d2 = Create("РЎС‚СѓРґРµРЅС‚С‹", 5);
-		Entry s1 = { 1, "РРІР°РЅРѕРІ" },
-			  s2 = { 2, "РџРµС‚СЂРѕРІ"},
-			  s3 = { 3, "Р“Р°Р№РєРѕРІ"};
+		Instance d2 = Create("Студенты", 5);
+		Entry s1 = { 1, "Иванов" },
+			  s2 = { 2, "Петров"},
+			  s3 = { 3, "Гайков"};
 		addEntry(d2, s1);
 		addEntry(d2, s2);
 		addEntry(d2, s3);
 
-		Entry newentry3 = { 3, "РќРёРєРѕР»Р°РµРІ" };
+		Entry newentry3 = { 3, "Николаев" };
 		UpdEntry(d2, 3, newentry3);
 		Print(d2);
 		Delete(d1);
