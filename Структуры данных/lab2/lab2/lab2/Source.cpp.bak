@@ -1,4 +1,4 @@
-﻿//Разработать приложение реализующие игру «Угадайка!» на основе бинарного поиска.
+//Разработать приложение реализующие игру «Угадайка!» на основе бинарного поиска.
 //
 //1. Пользователь вводит число N(может быть достаточно большое).
 //
@@ -32,7 +32,7 @@ int main()
 	string checkNum;
 
 	cout << "Выберите диапазон: ";
-	getline(cin, checkNum);
+	getline(cin,checkNum);
 
 	while (!isProved(checkNum, 1, 2000000))
 	{
@@ -44,8 +44,8 @@ int main()
 
 	cls;
 
-	cout << "Загадайте число в диапазоне от 1 до " << num << "! А я попытаюсь отгадать его =)";
-	Sleep(1200);
+	cout << "Загадайте число в диапазоне от 1 до "<< num <<"! А я попытаюсь отгадать его =)";
+	Sleep(1800);
 
 	int cnt_Half = 0;
 	int n = num;
@@ -68,6 +68,7 @@ int main()
 	/*Sleep(20000);*/
 	int iter = 1;
 	n = num / 2;
+	half = n;
 
 	while (!isGuessed)
 	{
@@ -75,10 +76,10 @@ int main()
 		if (iter >= cnt_Half)
 			iter = 1;
 
-		half = n / 2;
+		
 
 		cls;
-		cout << "Это число " << n << "?\n"
+		cout << "Это число " << half << "?\n"
 			<< "1) Да\n"
 			<< "2) Больше\n"
 			<< "3) Меньше\n"
@@ -99,10 +100,10 @@ int main()
 		}
 
 		point = stoi(checkNum);
-
+		
 		cls;
 
-		switch (point)
+		switch (point) 
 		{
 		case 1: //yes
 		{
@@ -111,19 +112,20 @@ int main()
 		}
 		case 2: // more
 		{
-			n += Halfs[iter];
+			n = n + half / 2;
 			cnt++;
 			break;
 		}
 		case 3: // less
 		{
-			n -= Halfs[iter];
+			n  = n - half / 2;
 			cnt++;
 			break;
 		}
+
 		}
 
-
+		half = (n - half) / 2;
 		cls;
 		iter++;
 	}
@@ -136,6 +138,7 @@ bool isProved(string num, int start, int end)
 {
 	char nums[] = "0123456789";
 	bool isNotNum = false;
+	if (num == "") return false;
 
 	for (int i = 0; i < num.size(); i++)
 	{
