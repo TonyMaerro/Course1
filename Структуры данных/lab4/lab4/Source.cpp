@@ -11,7 +11,7 @@ void main()
 	setlocale(LC_ALL, "ru");
 	string check;
 	unsigned int num,
-				 sum = 0;
+		sum = 0;
 
 	cout << "Введите, сколько элементов будет в массиве:  ";
 	getline(cin, check);

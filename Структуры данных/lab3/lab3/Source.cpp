@@ -23,7 +23,7 @@ int main()
 
 	cout << "¬ведит число элементов, которые будут в массиве:\t";
 	cin.getline(maskN, 40);
-	
+
 	while (!isProved(maskN, 1, 2000000))
 	{
 		cls;
@@ -47,7 +47,7 @@ int main()
 		A[i] = B[i] = C[i] = D[i] = E[i] = num;
 	}
 	outArr(A, N);
-	
+
 	ent;
 	ent;
 
@@ -58,7 +58,7 @@ int main()
 	outArr(B, N);
 	ent;
 	timePuz = end - start;
-	
+
 	ent;
 	ent;
 
@@ -125,7 +125,7 @@ void sortMethodPuz(int* arr, int N)
 			num = arr[i];
 			arr[i] = arr[i + 1];
 			isSorted = true;
-			arr[i + 1] = num;		
+			arr[i + 1] = num;
 		}
 		if (N == i + 2)
 		{
@@ -134,7 +134,7 @@ void sortMethodPuz(int* arr, int N)
 			else
 			{
 				isSorted = false;
-				i = 0;
+				i = -1;
 			}
 		}
 	}
@@ -142,7 +142,7 @@ void sortMethodPuz(int* arr, int N)
 void sortMethodShella(int* arr, int N)
 {
 	int num;
-	for(int i = 1; i < N; i++)
+	for (int i = 1; i < N; i++)
 		for (int j = i; j > 0 && arr[j - 1] > arr[j]; j--)
 		{
 			num = arr[j - 1];
@@ -171,14 +171,14 @@ void quickSort(int* arr, int first, int last)
 {
 	int mid, count;
 	int f = first, l = last;
-	mid = arr[(f + l) / 2]; 
+	mid = arr[(f + l) / 2];
 	do
 	{
 		while (arr[f] < mid)
 			f++;
 		while (arr[l] > mid)
 			l--;
-		if (f <= l) 
+		if (f <= l)
 		{
 			count = arr[f];
 			arr[f] = arr[l];
